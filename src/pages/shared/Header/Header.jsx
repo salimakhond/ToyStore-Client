@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { FaUserCircle } from 'react-icons/fa';
 
 const Header = () => {
 
@@ -43,7 +44,14 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end flex items-center">
-                
+                {
+                    user && <div className="tooltip tooltip-bottom" data-tip={user.displayName ? user.displayName : 'No Username Found'}>
+                        {
+                            user.photoURL ? <img className="w-12 rounded-full" src={user.photoURL} /> :
+                                <FaUserCircle className="text-4xl rounded-full"></FaUserCircle>
+                        }
+                    </div>
+                }
                 {
                     user ? <button onClick={handleLogout} className="btn btn-outline btn-primary ml-4">Log Out</button> : <Link to="/login">
                         <button className="btn btn-outline btn-primary ml-4">Login</button>
