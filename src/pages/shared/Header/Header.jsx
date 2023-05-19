@@ -20,7 +20,7 @@ const Header = () => {
         <li><Link to='/allToys'>All Toys</Link></li>
         <li><Link to='/addAToy'>Add A Toy</Link></li>
         <li><Link to='/myToys'>My Toys</Link></li>
-        <li><Link to='/blogs'>Blogs</Link></li>
+        <li><Link to='/blog'>Blog</Link></li>
     </>
 
     return (
@@ -35,7 +35,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case p-0 text-xl">
-                    <h2>Toy Market</h2>
+                    <h2>ToyStore</h2>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

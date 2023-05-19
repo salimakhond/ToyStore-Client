@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='container m-auto'>
                 <div className='md:flex md:flex-wrap lg:flex-nowrap lg:gap-24 container bg-[#1A1919] text-white border-b border-[#7E90FE]'>
                     <div className='md:w-6/12 lg:w-4/12 mb-10'>
-                        <Link to='/'><h2 className='font-extrabold text-3xl mb-5'>JobsHub</h2></Link>
+                        <Link to='/'><h2 className='font-extrabold text-3xl mb-5'>ToyStore</h2></Link>
                         <p className='mb-5 md:mr-10 lg:mr-0  text-[#ffffffb3]'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
                     </div>
                     <div className='md:w-6/12 lg:w-2/12 mb-10'>
