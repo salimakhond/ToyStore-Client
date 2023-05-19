@@ -60,7 +60,7 @@ const MyToys = () => {
                                     <td>{toy?.subCategory}</td>
                                     <td>${toy?.price}</td>
                                     <td>{toy?.quantity}</td>
-                                    <td><button className="btn btn-primary"><Link to={`/toysDetails/${toy?._id}`}>Update</Link></button></td>
+                                    <td><button className="btn btn-primary"><Link to={`/updateToys/${toy?._id}`}>Update</Link></button></td>
                                     <td><button onClick={() => handleDelete(toy?._id)} className="btn btn-error">Delete</button></td>
                                 </tr>
 
