@@ -1,8 +1,9 @@
 
 
+
 const ShopCategory = ({ product }) => {
 
-    const { toyName, image, price, rating } = product;
+    const { _id, toyName, image, price, rating } = product;
 
     return (
         <div className="bg-base-200 rounded-lg">
@@ -16,6 +17,23 @@ const ShopCategory = ({ product }) => {
                     <p className="text-[#646672] my-3 text-lg font-semibold">Ratting : {rating}</p>
 
                     <button className="btn btn-primary">View Details</button>
+                    {/* The button to open modal */}
+                    <label htmlFor={_id} className="btn">open modal</label>
+                    {/* Put this part before </body> tag */}
+                    <input type="checkbox" id={_id} className="modal-toggle" />
+                    <div className="modal modal-bottom sm:modal-middle">
+                        <div className="modal-box">
+                            <h3 className="font-bold text-lg">{toyName}</h3>
+                            <p className="py-4">Youve been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                            <div className="modal-action">
+                                <label htmlFor={_id} className="btn">Yay!</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
         </div>

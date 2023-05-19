@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Banner from "../Banner/Banner";
 import ShopCategory from "../ShopCategory/ShopCategory";
+import Gallery from "../Gallery/Gallery";
 
 
 const Home = () => {
@@ -25,9 +26,16 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Gallery></Gallery>
             {
-                <div>
-                    <div className="text-center mb-5">
+                <div className="container m-auto">
+
+                    <div className='w-2/3 m-auto text-center mb-14'>
+                        <h2 className='text-[#1A1919] text-4xl lg:text-5xl font-extrabold mb-4'>Popular in Store</h2>
+                        <p className='text-[#757575]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum amet vero magni perspiciatis ad molestias in, cupiditate sit temporibus velit placeat, unde itaque repudiandae consequuntur delectus. Aut sapiente neque magni?</p>
+                    </div>
+
+                    <div className="text-center mb-10">
                         <div className="btn-group btn-group-vertical lg:btn-group-horizontal ">
                             <button
                                 style={{ textTransform: 'capitalize', borderRight: '2px solid #fff' }}
@@ -64,6 +72,7 @@ const Home = () => {
                     </div></div>
 
             }
+
         </div>
     );
 };

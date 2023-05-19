@@ -33,9 +33,9 @@ const AddAToy = () => {
 
 
     return (
-        <div >
+        <div className="container m-auto py-[50px] md:py-[80px] lg:py-[130px] bg-white">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ms-4 me-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {errors.exampleRequired && <span>This field is required</span>}
                     <div className="form-control">
                         {/* <input type="text" {...register("Toy Name")} placeholder="Toy Name" name="name" className="input input-bordered" /> */}
@@ -112,15 +112,17 @@ const AddAToy = () => {
                             type="text"
                         />
                     </div>
-                    <input
-                        className="input input-bordered"
+                </div>
+                <input
+                        className="mt-6 w-full input input-bordered"
                         {...register("description")}
                         placeholder="description"
+                        type="text"
                     />
-                </div>
                 <div className="form-control mt-6">
                     <input className="btn btn-primary  mx-auto" value="Add a Toy" type="submit" />
                 </div>
+                
             </form>
         </div>
     );
