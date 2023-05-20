@@ -2,9 +2,12 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 
 
 const Register = () => {
+
+    useTitle('Register')
 
     const { createUser } = useContext(AuthContext);
     const [success, setSuccess] = useState('');
@@ -54,7 +57,7 @@ const Register = () => {
     }
 
     return (
-        <div className="py-[50px] md:py-[80px] lg:py-[130px] bg-white">
+        <div className="px-5 py-[50px] md:py-[80px] lg:py-[130px] bg-white">
             <div className="">
                 <div className="card m-auto w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">

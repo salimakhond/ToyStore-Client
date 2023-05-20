@@ -2,9 +2,12 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
+import useTitle from "../../hooks/useTitle";
 
 
 const Login = () => {
+    useTitle('Login')
+
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -48,7 +51,7 @@ const Login = () => {
             })
     }
     return (
-        <div className="py-[50px] md:py-[80px] lg:py-[130px] bg-white">
+        <div className="px-5 py-[50px] md:py-[80px] lg:py-[130px] bg-white">
             <div className="">
                 <div className="card m-auto w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">

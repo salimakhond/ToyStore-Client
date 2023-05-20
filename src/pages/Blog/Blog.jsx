@@ -1,8 +1,10 @@
+import useTitle from "../../hooks/useTitle";
 
 
 const Blog = () => {
+    useTitle('Blog')
     return (
-        <>
+        <div className="px-5">
             <div className='container m-auto py-[50px] md:py-[80px] lg:py-[130px]'>
                 <div className='mb-8'>
                     <h3 className='text-[#1A1919] font-bold text-xl mb-4'>1. What is an access token and refresh token? How do they work and where should we store them on the client-side?
@@ -25,7 +27,7 @@ const Blog = () => {
                     <p className='text-[#757575] text-lg font-medium'>Ans: MongoDB aggregate is a powerful framework that allows you to perform advanced data processing and analysis operations on MongoDB collections. It provides a way to combine multiple stages of data processing operations into a single pipeline, allowing you to transform, filter, group, and analyze your data in a flexible and efficient manner.</p>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
