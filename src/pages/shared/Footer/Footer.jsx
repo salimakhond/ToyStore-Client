@@ -14,18 +14,19 @@ const Footer = () => {
                         <h4 className='mb-4'>Company</h4>
                         <ul className='text-[#ffffffb3]'>
                             <li className='mb-4'>About Us</li>
-                            <li className='mb-4'>Work</li>
+                            <li className='mb-4'>Contact Us</li>
                             <li className='mb-4'>Latest News</li>
-                            <li className='mb-4'>Careers</li>
+                            <li className='mb-4'>Blog</li>
                         </ul>
                     </div>
                     <div className='md:w-6/12 lg:w-2/12 mb-10'>
                         <h4 className='mb-4'>Product</h4>
                         <ul className='text-[#ffffffb3]'>
-                            <li className='mb-4'>Prototype</li>
-                            <li className='mb-4'>Plans & Pricing</li>
-                            <li className='mb-4'>Customers</li>
-                            <li className='mb-4'>Integrations</li>
+                            <li className='mb-4'>Toys</li>
+                            <li className='mb-4'>Gadget</li>
+                            <li className='mb-4'>Cartoon Kit</li>
+                            <li className='mb-4'>Blocks Build Toy</li>
+                            <li className='mb-4'>Games</li>
                         </ul>
                     </div>
                     <div className='md:w-6/12 lg:w-2/12 mb-10'>
@@ -41,14 +42,14 @@ const Footer = () => {
                         <h4 className='mb-4'>Contact</h4>
                         <ul className='text-[#ffffffb3]'>
                             <li className='mb-4'>524 Broadway , NYC</li>
-                            <li className='mb-4'>+1 777 - 978 - 5570</li>
+                            <li className='mb-4'>+1 256 - 589 - 5308</li>
                             <li className='mb-4'>info@gmail.com</li>
                         </ul>
                     </div>
                 </div>
                 <div className='md:flex justify-between text-center text-[#ffffff66] pt-12'>
-                    <p className='mb-4 md:mb-0'>@2023 CareerHub. All Rights Reserved</p>
-                    <p>Powered by CareerHub</p>
+                    <p className='mb-4 md:mb-0'><span>&copy;</span> 2023 ToyStore. All Rights Reserved</p>
+                    <p>Powered by ToyStore</p>
                 </div>
             </div>
 

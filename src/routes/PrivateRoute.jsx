@@ -3,7 +3,11 @@ import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../pages/provider/AuthProvider";
 
 const PrivateRoute = ({ children }) => {
-    const { user, loading } = useContext(AuthContext)
+    const { user, loading } = useContext(AuthContext);
+
+    if(!user){
+        alert('first you loged in')
+    }
 
     const location = useLocation();
     if (loading) {
