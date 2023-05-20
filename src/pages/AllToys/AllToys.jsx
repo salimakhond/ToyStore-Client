@@ -5,9 +5,8 @@ const AllToys = () => {
 
     const allToys = useLoaderData();
 
-    console.log(allToys)
     return (
-        <div className="contents m-auto py-[50px] md:py-[80px] lg:py-[130px]">
+        <div className="container m-auto py-[30px] md:py-[50px] lg:py-[70px]">
             <div className="overflow-x-auto">
                 <table className="table table-compact w-full">
                     <thead>
@@ -17,7 +16,7 @@ const AllToys = () => {
                             <th>Sub-Category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,7 +44,7 @@ const AllToys = () => {
                             <th>Sub-Category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                     </tfoot>
                 </table>

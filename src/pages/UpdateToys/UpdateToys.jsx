@@ -2,12 +2,11 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const UpdateToys = () => {
     const updateToy = useLoaderData();
-
-    console.log(updateToy)
 
     const { _id } = updateToy;
 
@@ -16,7 +15,6 @@ const UpdateToys = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        console.log(data)
         fetch(`http://localhost:5000/product-by-id/${_id}`, {
             method: 'PUT',
             headers: {
@@ -26,6 +24,14 @@ const UpdateToys = () => {
         }).then(res => res.json())
             .then(data => {
                 console.log(data)
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your Toy Update is Successful',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
 
             })
     };

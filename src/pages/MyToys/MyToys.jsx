@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyToys = () => {
@@ -15,27 +16,43 @@ const MyToys = () => {
     }, [user])
 
     const handleDelete = (id) => {
-        const proceed = confirm('confirm to to delete')
-        if(proceed){
-            fetch(`http://localhost:5000/product-by-email/${id}`,{
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if(data.deletedCount>0){
-                    alert('Delete successfully')
-                    const remaining = toys.filter(toy=>toy?._id !== id);
-                    setToys(remaining)
-                }
-            })
-        }
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be delete this toy!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/product-by-email/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Coffee has been deleted.',
+                                'success'
+                            )
+                            const remaining = toys.filter(toy => toy?._id !== id);
+                            setToys(remaining)
+                        }
+                    })
+            }
+        })
 
     }
 
 
     return (
-        <div className="container m-auto py-[50px] md:py-[80px] lg:py-[130px]">
+        <div className="container m-auto py-[30px] md:py-[50px] lg:py-[70px]">
             <div className="overflow-x-auto">
                 <table className="table table-compact w-full">
                     <thead>

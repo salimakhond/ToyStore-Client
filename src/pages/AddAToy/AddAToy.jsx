@@ -10,7 +10,6 @@ const AddAToy = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data)
         fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: {

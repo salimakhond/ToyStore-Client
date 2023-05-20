@@ -35,12 +35,12 @@ const router = createBrowserRouter([
             },
             {
                 path: 'allToys',
-                element: <AllToys></AllToys>,
+                element: <PrivateRoute><AllToys></AllToys></PrivateRoute>,
                 loader: ()=> fetch('http://localhost:5000/products')
             },
             {
                 path: 'myToys',
-                element: <MyToys></MyToys>
+                element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
             },
             {
                 path: 'updateToys/:id',
