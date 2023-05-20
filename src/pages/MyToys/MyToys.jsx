@@ -19,7 +19,7 @@ const MyToys = () => {
 
         Swal.fire({
             title: 'Are you sure?',
-            text: "You Won't Be Delete This Toy!",
+            text: "You won't be delete this toy!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -38,7 +38,7 @@ const MyToys = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your Toy Has Been Deleted Successfully',
+                                'Your toy has been deleted successfully',
                                 'success'
                             )
                             const remaining = toys.filter(toy => toy?._id !== id);

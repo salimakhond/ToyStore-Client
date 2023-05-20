@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 
 const ToysDetails = () => {
 
@@ -17,7 +18,9 @@ const ToysDetails = () => {
                     <p className="text-[#646672] my-3 text-lg font-semibold">Seller Name : {sellername}</p>
                     <p className="text-[#646672] my-3 text-lg font-semibold">Email : {email}</p>
                     <p className="text-[#646672] my-3 text-lg font-semibold">Price : ${price}</p>
-                    <p className="text-[#646672] my-3 text-lg font-semibold">Ratting : {rating}</p>
+                    <p className="text-[#646672] flex items-center my-3 text-lg font-semibold">Ratting : {rating}
+                    <Rating className='ml-2' style={{ maxWidth: 100 }} value={rating || 0} readOnly />
+                    </p>
                     <p className="text-[#646672] my-3 text-lg font-semibold">Quantity : {quantity}</p>
                     <p className="text-[#646672] my-3 text-lg font-semibold">Sub Category : {subCategory}</p>
                     <p className="text-[#646672] my-3 text-lg font-semibold">Description : {description}</p>
