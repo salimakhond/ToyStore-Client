@@ -60,6 +60,7 @@ const MyToys = () => {
             <div className="container m-auto py-[30px] md:py-[50px] lg:py-[70px]">
                 <div className="flex justify-center mb-12">
                     <select value={sort} onChange={(e) => setSort(e.target.value)} className="select bg-blue-500 text-white font-semibold">
+                        <option className="font-semibold p-2" value='sort'>Price Sort</option>
                         <option className="font-semibold p-2" value='true'>Ascending Price</option>
                         <option className="font-semibold p-2" value='false'>Descending Price</option>
                     </select>
