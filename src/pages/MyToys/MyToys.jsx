@@ -10,13 +10,14 @@ const MyToys = () => {
     useTitle('My Toys')
 
     const { user } = useContext(AuthContext);
-    const [toys, setToys] = useState([])
+    const [toys, setToys] = useState([]);
+    const [sort, setSort] = useState('sort');
 
     useEffect(() => {
-        fetch(`https://toy-marketplace-server-psi-henna.vercel.app/product-by-email/${user?.email}`)
+        fetch(`https://toy-marketplace-server-psi-henna.vercel.app/product-by-email/${user?.email}/${sort}`)
             .then(res => res.json())
             .then(data => setToys(data))
-    }, [user])
+    }, [user, sort])
 
     const handleDelete = (id) => {
 
@@ -57,6 +58,12 @@ const MyToys = () => {
     return (
         <div className="px-5">
             <div className="container m-auto py-[30px] md:py-[50px] lg:py-[70px]">
+                <div className="flex justify-center mb-12">
+                    <select value={sort} onChange={(e) => setSort(e.target.value)} className="select bg-blue-500 text-white font-semibold">
+                        <option className="font-semibold p-2" value='true'>Ascending Price</option>
+                        <option className="font-semibold p-2" value='false'>Descending Price</option>
+                    </select>
+                </div>
                 <div className="overflow-x-auto">
                     <table className="table table-compact w-full">
                         <thead>
