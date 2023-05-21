@@ -70,8 +70,6 @@ const AddAToy = () => {
 
                             </select>
                         </div>
-
-
                         <div className="form-control">
                             <input
                                 className="input input-bordered"
