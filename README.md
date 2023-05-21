@@ -8,8 +8,6 @@ Best Features in ToyStore Project List.
     * Shop by category Section
     * News Section
     * About Us Section
-    * News Section
-    * About Us Section
     * Footer Area
 
 * Blog Page
