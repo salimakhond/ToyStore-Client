@@ -38,24 +38,24 @@ const Home = () => {
                         <div className="text-center mb-10">
                             <div className="btn-group btn-group-vertical lg:btn-group-horizontal ">
                                 <button
-                                    style={{ textTransform: 'capitalize', borderRight: '2px solid #fff' }}
+                                    style={{ borderRight: '2px solid #fff' }}
                                     onClick={() => handleTabClick("")}
-                                    className={`btn American Doll ${activeBtn == "" ? " btn-active" : ""
+                                    className={`btn capitalize border-0 lg:border American Doll ${activeBtn == "" ? " btn-active" : ""
                                         }`}>All Doll</button>
                                 <button
-                                    style={{ textTransform: 'capitalize', borderRight: '2px solid #fff' }}
+                                    style={{ borderRight: '2px solid #fff' }}
                                     onClick={() => handleTabClick("American Doll")}
-                                    className={`btn American Doll ${activeBtn == "American Doll" ? " btn-active" : ""
+                                    className={`btn capitalize border-0 lg:border  American Doll ${activeBtn == "American Doll" ? " btn-active" : ""
                                         }`}>American Doll</button>
                                 <button
-                                    style={{ textTransform: 'capitalize', borderRight: '2px solid #fff' }}
+                                    style={{ borderRight: '2px solid #fff' }}
                                     onClick={() => handleTabClick("Baby Doll")}
-                                    className={`btn Baby Doll ${activeBtn == "Baby Doll" ? " btn-active" : ""
+                                    className={`btn capitalize border-0 lg:border  Baby Doll ${activeBtn == "Baby Doll" ? " btn-active" : ""
                                         }`}>Baby Doll</button>
                                 <button
-                                    style={{ textTransform: 'capitalize' }}
+                                    style={{ borderRight: '2px solid #fff' }}
                                     onClick={() => handleTabClick("Barbie Doll")}
-                                    className={`btn Barbie Doll ${activeBtn == "Barbie Doll" ? " btn-active" : ""
+                                    className={`btn capitalize border-0 lg:border-0  Barbie Doll ${activeBtn == "Barbie Doll" ? " btn-active" : ""
                                         }`}>Barbie Doll</button>
                             </div>
                         </div>
