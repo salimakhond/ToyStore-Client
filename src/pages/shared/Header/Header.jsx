@@ -40,7 +40,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case p-0 text-xl">
-                        <h2>ToyStore</h2>
+                        <img className="w-16" src="https://i.ibb.co/qpyGtmK/toyStore.png" alt="" />
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">

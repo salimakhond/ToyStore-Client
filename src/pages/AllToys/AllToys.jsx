@@ -10,13 +10,13 @@ const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://toy-marketplace-server-psi-henna.vercel.app/products')
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [])
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/search/${searchValue}`)
+        fetch(`https://toy-marketplace-server-psi-henna.vercel.app/search/${searchValue}`)
             .then(res => res.json())
             .then(data => {
                 setAllToys(data)

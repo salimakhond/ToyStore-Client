@@ -46,12 +46,12 @@ const router = createBrowserRouter([
             {
                 path: 'updateToys/:id',
                 element: <UpdateToys></UpdateToys>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product-by-id/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-marketplace-server-psi-henna.vercel.app/product-by-id/${params.id}`)
             },
             {
                 path: 'toysDetails/:id',
                 element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product-by-id/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-marketplace-server-psi-henna.vercel.app/product-by-id/${params.id}`)
             },
             {
                 path: 'blog',

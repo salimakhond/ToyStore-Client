@@ -12,7 +12,7 @@ const AddAToy = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/products', {
+        fetch('https://toy-marketplace-server-psi-henna.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

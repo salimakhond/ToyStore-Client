@@ -17,7 +17,7 @@ const UpdateToys = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        fetch(`http://localhost:5000/product-by-id/${_id}`, {
+        fetch(`https://toy-marketplace-server-psi-henna.vercel.app/product-by-id/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

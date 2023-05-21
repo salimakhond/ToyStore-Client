@@ -1,3 +1,4 @@
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
@@ -7,8 +8,15 @@ const Footer = () => {
             <div className='container m-auto'>
                 <div className='md:flex md:flex-wrap lg:flex-nowrap lg:gap-24 container bg-[#1A1919] text-white border-b border-[#7E90FE]'>
                     <div className='md:w-6/12 lg:w-4/12 mb-10'>
-                        <Link to='/'><h2 className='font-extrabold text-3xl mb-5'>ToyStore</h2></Link>
+                        <Link to='/'><img className="w-28 mb-5" src="https://i.ibb.co/qpyGtmK/toyStore.png" alt="" /></Link>
                         <p className='mb-5 md:mr-10 lg:mr-0  text-[#ffffffb3]'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+
+                        <div className="flex gap-3">
+                            <Link className="p-3 bg-white text-black rounded-full"><FaFacebook className="text-xl"></FaFacebook></Link>
+                            <Link className="p-3 bg-white text-black rounded-full"><FaInstagram className="text-xl"></FaInstagram></Link>
+                            <Link className="p-3 bg-white text-black rounded-full"><FaTwitter className="text-xl"></FaTwitter></Link>
+                            <Link className="p-3 bg-white text-black rounded-full"><FaLinkedin className="text-xl"></FaLinkedin></Link>
+                        </div>
                     </div>
                     <div className='md:w-6/12 lg:w-2/12 mb-10'>
                         <h4 className='mb-4'>Company</h4>

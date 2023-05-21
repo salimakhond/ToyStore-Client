@@ -14,7 +14,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${activeBtn}`)
+        fetch(`https://toy-marketplace-server-psi-henna.vercel.app/products/${activeBtn}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [activeBtn])
@@ -31,7 +31,7 @@ const Home = () => {
                 <div className="px-5">
                     <div className="container m-auto">
                         <div className='w-2/3 m-auto text-center mb-14'>
-                            <h2 className='text-[#1A1919] text-4xl lg:text-5xl font-extrabold mb-4'>Popular in Store</h2>
+                            <h2 className='text-[#1A1919] text-4xl lg:text-5xl font-extrabold mb-4'>Shop By Category</h2>
                             <p className='text-[#757575]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum amet vero magni perspiciatis ad molestias in, cupiditate sit temporibus velit placeat, unde itaque repudiandae consequuntur delectus. Aut sapiente neque magni?</p>
                         </div>
 
