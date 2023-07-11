@@ -5,6 +5,7 @@ import Gallery from "../Gallery/Gallery";
 import News from "../News/News";
 import useTitle from "../../../hooks/useTitle";
 import AboutUs from "../AboutUs/AboutUs";
+import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Gallery></Gallery>
+            <WhyChooseUs></WhyChooseUs>
             {
                 <div className="px-5">
                     <div className="container m-auto">
